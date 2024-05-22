@@ -4,7 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8e16a79-7330-4b52-b975-50cc293b205f" name="Changes" comment="" />
+    <list default="true" id="d8e16a79-7330-4b52-b975-50cc293b205f" name="Changes" comment="First draft">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lift/simulator/data/LiftStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lift/simulator/simulation/Simulation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lift/simulator/view/Refreshable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/frontend/styles/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite.generated.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/generated/flow/generated-flow-imports.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/generated/flow/generated-flow-imports.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/generated/flow/generated-flow-webcomponent-imports.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/generated/flow/generated-flow-webcomponent-imports.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lift/simulator/Lift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lift/simulator/data/Lift.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lift/simulator/LiftRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lift/simulator/data/LiftRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lift/simulator/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lift/simulator/view/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lift/simulator/Simulation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lift/simulator/SimulationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lift/simulator/SimulationTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,12 +37,28 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;IzabelaBubula&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/IzabelaBubula/liftSimulation.git&quot;,
+    &quot;accountId&quot;: &quot;b65ba7cb-58e5-44f0-8d53-72a798ac5f1f&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -30,12 +70,16 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2gmtsftwGLWFPWQQa6d8JLHXSKA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.SimulationTest.callLiftTest.executor": "Run",
+    "JUnit.SimulationTest.executor": "Run",
+    "JUnit.SimulationTest.runningLiftTest.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -44,6 +88,7 @@
     "Spring Boot.SimulatorApplication.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/simulator (1)/simulator",
     "node.js.detected.package.eslint": "true",
@@ -54,7 +99,65 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\simulator (1)\simulator\src\main\resources\META-INF\resources\frontend\styles" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.lift.simulator" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SimulatorApplication">
+    <configuration name="SimulationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lift.simulator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lift.simulator" />
+      <option name="MAIN_CLASS_NAME" value="com.lift.simulator.SimulationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimulationTest.callLiftTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lift.simulator.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lift.simulator" />
+      <option name="MAIN_CLASS_NAME" value="com.lift.simulator.SimulationTest" />
+      <option name="METHOD_NAME" value="callLiftTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimulationTest.runningLiftTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lift.simulator.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lift.simulator" />
+      <option name="MAIN_CLASS_NAME" value="com.lift.simulator.SimulationTest" />
+      <option name="METHOD_NAME" value="runningLiftTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SimulatorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="simulator" />
@@ -63,6 +166,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SimulationTest" />
+        <item itemvalue="JUnit.SimulationTest.runningLiftTest" />
+        <item itemvalue="JUnit.SimulationTest.callLiftTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -80,11 +190,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716314788255</updated>
-      <workItem from="1716314789354" duration="11201000" />
+      <workItem from="1716314789354" duration="11557000" />
+      <workItem from="1716366680214" duration="3393000" />
+      <workItem from="1716396105974" duration="11629000" />
     </task>
+    <task id="LOCAL-00001" summary="First draft">
+      <option name="closed" value="true" />
+      <created>1716326723551</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716326723551</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First draft" />
+    <option name="LAST_COMMIT_MESSAGE" value="First draft" />
   </component>
 </project>

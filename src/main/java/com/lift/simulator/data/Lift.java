@@ -1,4 +1,4 @@
-package com.lift.simulator;
+package com.lift.simulator.data;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,10 +10,15 @@ public class Lift {
     @GeneratedValue
     private Long id;
 
-    private int currentFloor;
-    private int targetFloor;
+    private int currentFloor = 0;
+    private int targetFloor = 0;
     private int maxFloorNumber;
-    private int minFloorNumber;
+    private int minFloorNumber = 0;
+    private LiftStatus status = LiftStatus.NOT_MOVING;
+
+    public LiftStatus isMoving() { return status; }
+
+    public void setMoving(LiftStatus moving) { status = moving; }
 
     public void setId(Long id) {
         this.id = id;

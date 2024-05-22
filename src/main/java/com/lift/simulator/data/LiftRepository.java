@@ -1,4 +1,4 @@
-package com.lift.simulator;
+package com.lift.simulator.data;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

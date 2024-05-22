@@ -1,0 +1,38 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.v-grid {
+    background-color: #ffffff;
+}
+
+.v-grid-cell {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.v-grid-header {
+    background-color: #f0f0f0;
+}
+
+.v-button {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+.v-text-field {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+vaadin-text-field::part(label),
+vaadin-text-area::part(label),
+vaadin-password-field::part(label) {
+    color: #000000;
+}
+
+label {
+    color: #000000;
+}
