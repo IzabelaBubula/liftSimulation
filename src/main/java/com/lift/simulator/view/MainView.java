@@ -22,7 +22,6 @@ import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.ValidationException;
 import com.vaadin.flow.router.Route;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -191,21 +190,24 @@ public class MainView extends VerticalLayout implements Refreshable {
     }
 
     private VerticalLayout createDialogLayout(Long id) {
+        var lift = liftRepository.findById(id).get();
+
         Span text = new Span("Editing for lift with id: " + id);
         TextField maxFloor = new TextField("Max Floor");
+        Span currentMaxFloor = new Span("Current max floor " + lift.getMaxFloorNumber());
         TextField minFloor = new TextField("Min Floor");
+        Span currentMinFloor = new Span("Current min floor " + lift.getMinFloorNumber());
         Button button = new Button("Save");
         button.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
 
-        VerticalLayout dialogLayout = new VerticalLayout(text, maxFloor,
-                minFloor, button);
+        VerticalLayout dialogLayout = new VerticalLayout(text, currentMaxFloor, maxFloor,
+                currentMinFloor, minFloor, button);
         dialogLayout.setPadding(false);
         dialogLayout.setSpacing(false);
         dialogLayout.setAlignItems(FlexComponent.Alignment.STRETCH);
         dialogLayout.getStyle().set("width", "18rem").set("max-width", "100%");
 
         button.addClickListener(click -> {
-            var lift = liftRepository.findById(id).get();
             if (!maxFloor.isEmpty()) {
                 lift.setMaxFloorNumber(Integer.parseInt(maxFloor.getValue()));
             }
