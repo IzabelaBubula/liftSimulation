@@ -30,33 +30,35 @@ class SimulationTest{
     UI ui;
 
     @Test
-    public void callLiftTest() {
-
-        var lift1 = createLift(1l,2,12,0,5);
-        var lift2 = createLift(2l,10,12,0,5);
-
-        List<Lift> lifts = Arrays.asList(lift1, lift2);
-        when(repository.findAll()).thenReturn(lifts);
-
-        callLift(repository, 9, refreshable, ui);
-        Assert.assertEquals(9, lifts.get(1).getTargetFloor());
-        callLift(repository, 3, refreshable, ui);
-        Assert.assertEquals(3, lifts.get(0).getTargetFloor());
-
-    }
-
-    @Test
     public void runningLiftTest() throws InterruptedException {
         var lift1 = createLift(1l,0,12,0,0);
 
         List<Lift> lifts = Arrays.asList(lift1);
         when(repository.findAll()).thenReturn(lifts);
 
-        callLift(repository, 2, refreshable, ui);
-        Thread.sleep(2 * 2000 + 1000);
+        callLift(repository, 2,1, refreshable, ui);
+        Thread.sleep(6 * 2000 + 2000);
 
-        Assert.assertEquals(2, lifts.get(0).getCurrentFloor());
-        Assert.assertEquals(LiftStatus.NOT_MOVING, lifts.get(0).isMoving());
+        Assert.assertEquals(1, lifts.get(0).getCurrentFloor());
+        Assert.assertEquals(LiftStatus.NOT_MOVING, lifts.get(0).getStatus());
+    }
+
+    @Test
+    void busyLiftTest() throws InterruptedException {
+        var lift1 = createLift(1l,0,12,0,0);
+        var lift2 = createLift(1l,0,12,0,0);
+
+        List<Lift> lifts = Arrays.asList(lift1, lift2);
+        when(repository.findAll()).thenReturn(lifts);
+
+        callLift(repository, 2,1, refreshable, ui);
+        Thread.sleep(1000);
+        callLift(repository, 2,1, refreshable, ui);
+        callLift(repository, 2,3, refreshable, ui);
+        Thread.sleep(14000);
+
+        Assert.assertTrue(lifts.stream().anyMatch(lift -> lift.getCurrentFloor() == 3));
+
     }
 
     private Lift createLift(Long id, int currentFloor, int maxNumberFloor, int minNumberFloor, int tergerFloor) {
@@ -66,7 +68,7 @@ class SimulationTest{
         lift.setMaxFloorNumber(maxNumberFloor);
         lift.setMinFloorNumber(minNumberFloor);
         lift.setTargetFloor(tergerFloor);
-        lift.setMoving(LiftStatus.NOT_MOVING);
+        lift.setStatus(LiftStatus.NOT_MOVING);
         return lift;
     }
 

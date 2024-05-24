@@ -4,29 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8e16a79-7330-4b52-b975-50cc293b205f" name="Changes" comment="First draft">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lift/simulator/data/LiftStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lift/simulator/simulation/Simulation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lift/simulator/view/Refreshable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/frontend/styles/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vite.generated.ts" afterDir="false" />
+    <list default="true" id="d8e16a79-7330-4b52-b975-50cc293b205f" name="Changes" comment="Adding call button,&#10;Adding logic for finding closest lift and calling it&#10;Adding simulation of lift">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lift/simulator/data/LiftRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/generated/flow/generated-flow-imports.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/generated/flow/generated-flow-imports.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/generated/flow/generated-flow-webcomponent-imports.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/generated/flow/generated-flow-webcomponent-imports.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lift/simulator/Lift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lift/simulator/data/Lift.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lift/simulator/LiftRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lift/simulator/data/LiftRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lift/simulator/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lift/simulator/view/MainView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lift/simulator/Simulation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lift/simulator/data/Lift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lift/simulator/data/Lift.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lift/simulator/data/LiftStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lift/simulator/data/LiftStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lift/simulator/simulation/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lift/simulator/simulation/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lift/simulator/view/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lift/simulator/view/MainView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/lift/simulator/SimulationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lift/simulator/SimulationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +24,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -77,7 +62,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JUnit.SimulationTest.callLiftTest.executor": "Run",
+    "JUnit.SimulationTest.busyLiftTest.executor": "Run",
+    "JUnit.SimulationTest.callLiftTest.executor": "Debug",
     "JUnit.SimulationTest.executor": "Run",
     "JUnit.SimulationTest.runningLiftTest.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
@@ -96,10 +82,14 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\simulator (1)\simulator" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -122,6 +112,22 @@
       <option name="PACKAGE_NAME" value="com.lift.simulator" />
       <option name="MAIN_CLASS_NAME" value="com.lift.simulator.SimulationTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimulationTest.busyLiftTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lift.simulator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lift.simulator" />
+      <option name="MAIN_CLASS_NAME" value="com.lift.simulator.SimulationTest" />
+      <option name="METHOD_NAME" value="busyLiftTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -168,9 +174,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SimulationTest" />
+        <item itemvalue="JUnit.SimulationTest.busyLiftTest" />
         <item itemvalue="JUnit.SimulationTest.runningLiftTest" />
         <item itemvalue="JUnit.SimulationTest.callLiftTest" />
+        <item itemvalue="JUnit.SimulationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +199,7 @@
       <updated>1716314788255</updated>
       <workItem from="1716314789354" duration="11557000" />
       <workItem from="1716366680214" duration="3393000" />
-      <workItem from="1716396105974" duration="11629000" />
+      <workItem from="1716396105974" duration="30492000" />
     </task>
     <task id="LOCAL-00001" summary="First draft">
       <option name="closed" value="true" />
@@ -202,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716326723551</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adding call button,&#10;Adding logic for finding closest lift and calling it&#10;Adding simulation of lift">
+      <option name="closed" value="true" />
+      <created>1716408422214</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716408422214</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +236,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First draft" />
-    <option name="LAST_COMMIT_MESSAGE" value="First draft" />
+    <MESSAGE value="Adding call button,&#10;Adding logic for finding closest lift and calling it&#10;Adding simulation of lift" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding call button,&#10;Adding logic for finding closest lift and calling it&#10;Adding simulation of lift" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.lift.simulator.data.Lift" memberName="currentFloor" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="brokenLifts.get(0)" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

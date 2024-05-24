@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
+import java.util.Objects;
+
 @Entity
 public class Lift {
     @Id
@@ -16,9 +18,9 @@ public class Lift {
     private int minFloorNumber = 0;
     private LiftStatus status = LiftStatus.NOT_MOVING;
 
-    public LiftStatus isMoving() { return status; }
+    public LiftStatus getStatus() { return status; }
 
-    public void setMoving(LiftStatus moving) { status = moving; }
+    public void setStatus(LiftStatus moving) { status = moving; }
 
     public void setId(Long id) {
         this.id = id;
@@ -59,4 +61,13 @@ public class Lift {
     public int getCurrentFloor() {
         return currentFloor;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Lift lift = (Lift) o;
+        return Objects.equals(id, lift.id);
+    }
+
 }
